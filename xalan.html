@@ -8,7 +8,9 @@
 		/* 
 			this works in chrome and firefox
 		*/
+		console.log(new Date());
 		console.log(convertDocbookToHTML("<section><title>hi</title></section>"));
+		console.log(new Date());
 
 		/*
 			this results in a "Uncaught RangeError: Maximum call stack size exceeded" in chrome
@@ -16,6 +18,7 @@
 		worker = new Worker("xalan.js");
 		worker.addEventListener('message', function(e) {
 			console.log(e.data);
+			console.log(new Date());
 		});
 		worker.postMessage(
 		"<section>" +
