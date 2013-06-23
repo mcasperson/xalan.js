@@ -1,0 +1,4 @@
+/home/matthew/Development/xerces.js/xalan-c-1.11/c/obj/process.o
+/home/matthew/Development/xerces.js/xalan-c-1.11/c/obj/TestXPath.o
+/home/matthew/Development/xerces.js/xalan-c-1.11/c/obj/MsgCreator.o
+/home/matthew/Development/xerces.js/libiconv-1.14/libcharset/lib/localcharset.o
