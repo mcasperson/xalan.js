@@ -8,11 +8,11 @@ EMBED_FILES="--embed-file VERSION.xsl --embed-file lib/lib.xsl --embed-file comm
 
 cd /home/matthew/git/xalan.js/docbook-xsl-1.78.1/
 
-# --llvm-opts above 0 does not work
-# RELOOP=1 does not work
+# Most optimization options seem to break either the compilation (--llvm-opts above 0 and RELOOP=1) or
+# stop the application from operating at runtime.
 
 export JAVA_HEAP_SIZE=4096m
-~/emscripten/emcc -O2 -s DISABLE_EXCEPTION_CATCHING=0 -s RELOOP=0 -s TOTAL_MEMORY=67108864 --closure 1 --llvm-opts 0 --pre-js ../pre.js ${XALAN_O_FILES} ${XERCES_O_FILES} ${ICONV_O_FILES} ${EMBED_FILES} -o ../xalan.raw.js 
+~/emscripten/emcc -s TOTAL_MEMORY=67108864 --llvm-opts 0 --pre-js ../pre.js ${XALAN_O_FILES} ${XERCES_O_FILES} ${ICONV_O_FILES} ${EMBED_FILES} -o ../xalan.raw.js 
 
 cd /home/matthew/git/xalan.js
 
