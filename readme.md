@@ -1,3 +1,11 @@
+USING
+=====
+
+To see the library in action, download xalan.html and xalan.js.
+
+COMPILING
+=========
+
 Compile Xalan for the local system. This is so we can get a working copy of MsgCreator.
 
 GNU ICONV
