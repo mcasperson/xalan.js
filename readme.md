@@ -19,7 +19,7 @@ XERCES
 
 XALAN
 
-edit runconfigure to use emscripten
+Edit runConfigure so that it calls *~/emscripten/emconfigure ./configure* instead of just configure.
 
 	export XALANCROOT=/home/matthew/Development/xerces.js/xalan-c-1.11/c	
 	./runConfigure -p linux -z -I/home/matthew/Development/xerces.js/xerces-c-3.1.1/src
