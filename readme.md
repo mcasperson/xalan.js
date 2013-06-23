@@ -24,7 +24,7 @@ Edit runConfigure so that it calls *~/emscripten/emconfigure ./configure* instea
 	export XALANCROOT=/home/matthew/Development/xerces.js/xalan-c-1.11/c	
 	./runConfigure -p linux -z -I/home/matthew/Development/xerces.js/xerces-c-3.1.1/src
 	
-Copy the native build of xalan-c-1.11/c/bin/MsgCreator to the emscripten build
+Copy the native build of xalan-c-1.11/c/bin/MsgCreator to the emscripten build (otherwise you'll get errors like *can not execute MsgCreator*).
 
 	export EMCC_CFLAGS=--ignore-dynamic-linking
 	~/emscripten/emmake make
