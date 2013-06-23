@@ -12,7 +12,7 @@ cd /home/matthew/git/xalan.js/docbook-xsl-1.78.1/
 # stop the application from operating at runtime.
 
 export JAVA_HEAP_SIZE=4096m
-~/emscripten/emcc -s TOTAL_MEMORY=67108864 --llvm-opts 0 --pre-js ../pre.js ${XALAN_O_FILES} ${XERCES_O_FILES} ${ICONV_O_FILES} ${EMBED_FILES} -o ../xalan.raw.js 
+~/emscripten/emcc -s TOTAL_MEMORY=67108864 --pre-js ../pre.js ${XALAN_O_FILES} ${XERCES_O_FILES} ${ICONV_O_FILES} ${EMBED_FILES} -o ../xalan.raw.js 
 
 cd /home/matthew/git/xalan.js
 

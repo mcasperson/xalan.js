@@ -6,14 +6,14 @@
 <body>
 	<script>
 		/* 
-			this works in chrome and firefox
+			do standard run
 		*/
 		console.log(new Date());
 		console.log(convertDocbookToHTML("<section><title>hi</title></section>"));
 		console.log(new Date());
 
 		/*
-			this results in a "Uncaught RangeError: Maximum call stack size exceeded" in chrome
+			Run in web worker
 		*/
 		worker = new Worker("xalan.js");
 		worker.addEventListener('message', function(e) {
